@@ -1,0 +1,258 @@
+
+/*  модалка 1 */
+.popup-open{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #000000;
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  min-width: 124px;
+  min-height: 24px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.popup-fade {
+	display: none;
+}
+.popup-fade:before {
+	content: '';
+	background: #000;
+	position: fixed; 
+	left: 0;
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: 0.7;
+	z-index: 9999;
+}
+.popup {
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	max-width: 1200px;	
+	height: auto;
+	margin-left: -600px;
+	background: #fff; 
+	z-index: 99999;
+	opacity: 1;	
+}
+.popup-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.modal__content{
+  display: flex;
+  justify-content: space-between;
+  /*max-width: 100%;*/
+}
+
+.mini__content{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+}
+
+.modal__pic{
+  max-width: 70%;
+}
+
+.modal__pic img{
+  width: 100%;
+}
+
+.modal__description{
+  display: flex;
+  flex-direction: column;
+  max-width:30%;
+  width: 423px;
+  margin: 70px 20px 0 20px;
+
+}
+
+.line_modal1{
+  display: flex;
+  justify-content: space-between;
+}
+.product__type{
+  font-weight: 300;
+  font-size: 36px;
+}
+.name_m{
+  display: flex;
+  padding-top: 10px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.line_modal2{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 17px;
+}
+.vendorCode{
+  font-weight: 300;
+  font-size: 12px;
+}
+.collection_m{
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.line_modal3{
+  width: 100%;
+  height: 0px;
+  border: 1px solid #C4C4C4;
+}
+
+.line_modal4{
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 24px;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.line_modal5{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 42px;
+}
+
+.line_modal7{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 65px;
+}
+
+.line_modal8{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 14px;
+}
+
+.valueRing{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.valueRing select{
+  cursor:pointer;
+  color: #000;
+  font-weight: 300;
+  font-size: 14px;
+  padding: .5em;
+  padding-right: 2.5em;	
+  border: 0.5px solid #DDDDDD;
+  margin: 0;
+  -webkit-appearance: button;
+}
+.valueRing::before,
+.valueRing::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.valueRing::after {
+  content: "\25BC";
+  height: 2em;
+  font-size: .625em;
+  line-height: 1;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -.5em;
+}
+
+.valueRing::before {
+  width: 2em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.valueRing select[disabled] {
+  color: rgba(0,0,0,.3);
+}
+
+.valueRing select[disabled]::after {
+  color: rgba(0,0,0,.1);
+}
+
+.valueRing::before {
+  background-color: rgba(255,255,255,.15);
+}
+
+.valueRing::after {
+  color: rgba(0,0,0);
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+
+.line_modal5 p{
+  text-align: right;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.line_modal8 i{
+  font-size: 25px;
+  padding-left: 8px;
+}
+
+.button__add{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 40px;
+}
+.add__cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #000000;
+  color: #fff;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;;
+  min-width: 123px;
+  min-height: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 1200px){
+  .popup {
+    top: 10%;
+    left: 50%;
+    max-width: 400px;
+    height: auto;
+    margin-left: -200px;
+    background: #fff;
+    z-index: 99999;
+    opacity: 1;
+  }
+  .mini__content {
+    flex-direction: column;
+    max-width: 400px;
+  }
+  .modal__pic {
+    max-width: 100%;
+  }
+  .modal__description {
+    display: flex;
+    max-width: 100%;
+    margin: 20px 0px 20px 0px;
+    padding: 0 10px 0 10px;
+  }
+}
